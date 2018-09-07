@@ -12,13 +12,23 @@ module.exports = {
      },
      plugins:[
         new htmlWebpackPlugin({
-            thempalte:path.resolve(__dirname, '../index.html'),
-            inject: 'head'
+            inject: 'head',
+            template:path.resolve(__dirname,'index.html'),
+        }),
+        new htmlWebpackPlugin({
+            inject: 'head',
+            template:path.resolve(__dirname,'index.html'),
+            filename:'demos.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
         }),
      ],
+     // 此处添加配置
+     resolve: {
+        extensions: ['.ts', '.tsx'] ,
+        modules: ['src' ,'node_modules']
+     } , 
      module: {
         rules: [
             { 
@@ -35,5 +45,6 @@ module.exports = {
                   ],        
             }
         ]
-      }
+      },
+    devtool:'source-map'
 }

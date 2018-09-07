@@ -7,7 +7,7 @@ const webpackConfig = require('./webpack.config');
 
 
 
-rm('../dist',err =>{
+rm(path.resolve(__dirname,'../dist'),err =>{
     if(err){
         console.error(err);
         throw err;
