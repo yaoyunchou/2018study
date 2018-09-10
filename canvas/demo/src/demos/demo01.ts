@@ -1,4 +1,7 @@
-
+/**
+ * 引入对应的包
+ */
+import $ from 'jquery'
 /**
  * 
  */
@@ -16,3 +19,14 @@ export class DrayStar{
     }
 
 }
+
+//
+
+// 页面加载完成后再获取
+$(function(){
+    // 获取canvas对象
+    let canvas:any = $('.myCanvas')[0];
+    let ctx = canvas.getContext('2d')
+    new  DrayStar(ctx).dray();
+    console.log('jquery加载完成-----'+$);
+})
