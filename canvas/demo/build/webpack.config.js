@@ -9,7 +9,7 @@ module.exports = {
         star: [path.resolve(__dirname, '../src/demos/demo03.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
      },
      output:{
-         path:path.resolve(__dirname,'../dist'),
+         path:path.resolve(__dirname,'../canvas'),
          filename:'js/[name].js'
      },
      plugins:[
