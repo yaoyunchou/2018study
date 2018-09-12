@@ -51,20 +51,31 @@ class DrayRect{
         this.ctx.lineTo(0,this.ctx.canvas.height);
         this.ctx.closePath();
 
-       
-        this.ctx.fillStyle = '#000000'
+        let  linearGrad = this.ctx.createLinearGradient(0,0,0,this.ctx.canvas.height);
+        linearGrad.addColorStop(0.0,'black');
+        linearGrad.addColorStop(1.0,'blue');
+        this.ctx.fillStyle = linearGrad;
         this.ctx.fill();
     }
     drayStarSky(){
         this.drayBg();
         for(let i = 0; i<100; i++){
             let pointX = Math.random()*this.ctx.canvas.width;
-            let pointY = Math.random()*this.ctx.canvas.height;
-            let r1 = Math.random()*10+10;
+            let pointY = Math.random()*this.ctx.canvas.height*0.6;
+            let r1 = Math.random()*5+5;
             let r2 = r1/2;
             let rotate = Math.random()*360;
             this.dray({x:pointX, y:pointY},r1,r2,rotate)
         }
+    }
+    drayGrad(){
+        //创建第一个点到第二个点连线方向的渐变
+                                  
+        let linearGrad = this.ctx.createLinearGradient(0,0,0,800);
+        linearGrad.addColorStop(0.0,'black');
+        linearGrad.addColorStop(1.0,'blue');
+        this.ctx.fillStyle = linearGrad;
+        this.ctx.fillRect(0,0,800,800)
     }
     /**
      * @return {boolean}

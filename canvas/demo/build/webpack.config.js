@@ -7,18 +7,21 @@ module.exports = {
         demo01: [path.resolve(__dirname, '../src/demos/demo01.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],
         rectangle: [path.resolve(__dirname, '../src/demos/demo02.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
         star: [path.resolve(__dirname, '../src/demos/demo03.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
+        allstar: [path.resolve(__dirname, '../src/demos/demo04.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
      },
      output:{
          path:path.resolve(__dirname,'../canvas'),
          filename:'js/[name].js'
      },
      plugins:[
+         //
         new htmlWebpackPlugin({
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
             filename:'demo01.html',
             chunks:['demo01']
         }),
+        //绘制矩形
         new htmlWebpackPlugin({
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
@@ -26,11 +29,20 @@ module.exports = {
             chunks:['rectangle']
 
         }),
+        // 绘制五角星  和星空
         new htmlWebpackPlugin({
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
             filename:'star.html',
             chunks:['star']
+
+        }),
+         // 绘制多角星
+         new htmlWebpackPlugin({
+            inject: 'head',
+            template:path.resolve(__dirname,'index.html'),
+            filename:'allstar.html',
+            chunks:['allstar']
 
         }),
         new MiniCssExtractPlugin({
