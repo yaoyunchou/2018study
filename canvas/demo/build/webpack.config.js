@@ -8,6 +8,7 @@ module.exports = {
         rectangle: [path.resolve(__dirname, '../src/demos/demo02.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
         star: [path.resolve(__dirname, '../src/demos/demo03.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
         allstar: [path.resolve(__dirname, '../src/demos/demo04.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
+        shadow: [path.resolve(__dirname, '../src/demos/demo05.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
      },
      output:{
          path:path.resolve(__dirname,'../canvas'),
@@ -37,12 +38,20 @@ module.exports = {
             chunks:['star']
 
         }),
-         // 绘制多角星
+         // 实现渐变的星空
          new htmlWebpackPlugin({
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
             filename:'allstar.html',
             chunks:['allstar']
+
+        }),
+        // 实现阴影等效果
+        new htmlWebpackPlugin({
+            inject: 'head',
+            template:path.resolve(__dirname,'index.html'),
+            filename:'shadow.html',
+            chunks:['shadow']
 
         }),
         new MiniCssExtractPlugin({
