@@ -43,6 +43,7 @@ class DrayRect{
         this.ctx.fillStyle = '#ff8200';
         this.ctx.fill();
     }
+    // 绘制背景 
     drayBg(){
         this.ctx.beginPath();
         this.ctx.moveTo(0,0);
@@ -55,6 +56,7 @@ class DrayRect{
         this.ctx.fillStyle = '#000000'
         this.ctx.fill();
     }
+    // 绘制星空
     drayStarSky(){
         this.drayBg();
         for(let i = 0; i<100; i++){
