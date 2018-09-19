@@ -1,6 +1,9 @@
 /**
- * 引入对应的包
+ * 1.学习渐变的规律
+ * 2.优化学习布局
  */
+
+//引入对应的包
 import $ from 'jquery'
 
 function getDeg(deg:number){

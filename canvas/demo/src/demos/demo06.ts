@@ -1,6 +1,11 @@
 /**
- * 引入对应的包
+ * 2018-09-19
+ * 本小结主要测试圆弧的画法
+ * 1.如何画圆弧
+ * 2.如何画好曲线
+ * 3.关于闭合回路的学习
  */
+// 引入对应的包
 import $ from 'jquery'
 
 function getDeg(deg:number){
@@ -16,7 +21,7 @@ class DrayRect{
     }
     /**
      * 
-     *  这个方法是比较常规的实现方法，但是这个方法的问题在于我们画出啊了的有 lineWidth的矩形不是闭合的
+     *  这个方法是比较常规的实现方法，但是这个方法的问题在于我们画出来了的有 lineWidth的矩形不是闭合的
      * @param point 
      * @param r1 
      * @param r2 
@@ -67,6 +72,50 @@ class DrayRect{
         }
     }
     /**
+     * 画一个圆形
+     */
+    drawAnArc(point:{x:number,y:number},r:number,rotate1:number,rotate2:number){
+        this.ctx.beginPath();
+        this.ctx.moveTo(200,0);
+        this.ctx.lineTo(200,400);
+        this.ctx.moveTo(0,200);
+        this.ctx.lineTo(400,200);
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth =1;
+        this.ctx.stroke()
+        this.ctx.closePath()
+        this.ctx.beginPath();
+        this.ctx.arc(point.x,point.y,r,rotate1,rotate2);
+        this.ctx.strokeStyle = "black"; 
+        this.ctx.stroke();
+    }
+    // 画一个带圆角的
+    drawAnRectangle(point:{x:number,y:number},r:number,rotate1:number,rotate2:number){
+        this.ctx.beginPath();
+        this.ctx.moveTo(200,0);
+        this.ctx.lineTo(200,400);
+        this.ctx.moveTo(0,200);
+        this.ctx.lineTo(400,200);
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth =1;
+        this.ctx.stroke()
+        this.ctx.closePath()
+        this.ctx.beginPath();
+        this.ctx.arc(point.x,point.y,r,rotate1,rotate2);
+        this.ctx.strokeStyle = "black"; 
+        this.ctx.stroke();
+    }
+     // 画一个带圆角的
+     drawArc(point:{x:number,y:number},width:number,height:number,r:number){
+        this.ctx.beginPath();
+        this.ctx.moveTo(point.x,point.y);
+        this.ctx.lineTo(point.x+100,point.y);
+        this.ctx.arcTo(point.x+100,point.y,point.x+100+r,point.y+r,r);
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth =1;
+        this.ctx.stroke();
+    }
+    /**
      * @return {boolean}
      */
     isOutCanvas(point:{x:number,y:number},r1:number){
@@ -82,5 +131,18 @@ $(function(){
     // 获取canvas对象
     let canvas:any = $('.myCanvas')[0];
     let ctx = canvas.getContext('2d')
-    new  DrayRect(ctx).drayStarSky();
+
+    //展示画圆的动态工程
+    let drawAnArc =  new  DrayRect(ctx);
+    let drawAnArcStep = 0;
+    let  timer = setInterval(()=>{
+        if(drawAnArcStep <=103){
+            drawAnArc.drawAnArc({x:200,y:200},100,0,drawAnArcStep/100*2*Math.PI);
+        }else{
+            drawAnArcStep = 0;
+            ctx.clearRect(0,0, 400,400);
+        }
+        drawAnArcStep ++;
+    },100);
+    drawAnArc.drawArc({x:500,y:100},100,100,20);
 })

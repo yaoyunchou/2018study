@@ -5,10 +5,12 @@ const  path = require('path')
 module.exports = {
      entry:{
         demo01: [path.resolve(__dirname, '../src/demos/demo01.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],
-        rectangle: [path.resolve(__dirname, '../src/demos/demo02.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
+        rectangle: [path.resolve(__dirname, '../src/demos/demo02.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ], 
         star: [path.resolve(__dirname, '../src/demos/demo03.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
-        allstar: [path.resolve(__dirname, '../src/demos/demo04.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
-        shadow: [path.resolve(__dirname, '../src/demos/demo05.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],    
+        allstar: [path.resolve(__dirname, '../src/demos/demo04.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ], 
+        shadow: [path.resolve(__dirname, '../src/demos/demo05.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],
+        curve: [path.resolve(__dirname, '../src/demos/demo06.ts'), path.resolve(__dirname, '../src/assets/stylesheet/index.scss') ],
+        
      },
      output:{
          path:path.resolve(__dirname,'../canvas'),
@@ -34,6 +36,7 @@ module.exports = {
         new htmlWebpackPlugin({
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
+            title:'绘制五角星  和星空',
             filename:'star.html',
             chunks:['star']
 
@@ -43,6 +46,7 @@ module.exports = {
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
             filename:'allstar.html',
+            title:'实现渐变的星空',
             chunks:['allstar']
 
         }),
@@ -51,8 +55,17 @@ module.exports = {
             inject: 'head',
             template:path.resolve(__dirname,'index.html'),
             filename:'shadow.html',
+            title:'实现阴影等效果',
             chunks:['shadow']
 
+        }),
+         // 实现曲线
+         new htmlWebpackPlugin({
+            inject: 'head',
+            template:path.resolve(__dirname,'index.html'),
+            filename:'curve.html',
+            title:'实现曲线',
+            chunks:['curve']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
@@ -80,5 +93,8 @@ module.exports = {
             }
         ]
       },
-    devtool:'source-map'
+    devtool:'source-map',
+    watchOptions: {
+        poll: 1000
+      }
 }

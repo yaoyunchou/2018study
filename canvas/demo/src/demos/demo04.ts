@@ -1,6 +1,8 @@
 /**
- * 引入对应的包
+ * 学习基础的画图
  */
+
+// 引入对应的包
 import $ from 'jquery'
 
 function getDeg(deg:number){
