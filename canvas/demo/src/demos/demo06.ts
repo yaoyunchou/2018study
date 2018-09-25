@@ -107,13 +107,27 @@ class DrayRect{
     }
      // 画一个带圆角的
      drawArc(point:{x:number,y:number},width:number,height:number,r:number){
+        /**
+         * 曲线绘制的注意点是arcTo方法的两个点的确认，  
+         */
         this.ctx.beginPath();
         this.ctx.moveTo(point.x,point.y);
-        this.ctx.lineTo(point.x+100,point.y);
-        this.ctx.arcTo(point.x+100,point.y,point.x+100+r,point.y+r,r);
+        this.ctx.lineTo(point.x+r,point.y);
+        this.ctx.arcTo(point.x+2*r,point.y,point.x+2*r,point.y+r,r);
+        this.ctx.lineTo(point.x+2*r,point.y+2*r);
+
         this.ctx.strokeStyle = "red";
         this.ctx.lineWidth =1;
         this.ctx.stroke();
+
+
+        //尝试用圆弧画个蓝色类似的效果
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(point.x+100,point.y+100)
+        this.ctx.lineTo(point.x+100+r,point.y)
+        this.ctx.arc(point.x+2*r,point.y,point.x+2*r,point.y+r,r);
+
     }
     /**
      * @return {boolean}
