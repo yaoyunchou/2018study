@@ -1,0 +1,10 @@
+[2018-10-09T20:05:08.011] [INFO] test - Time: 2018-10-09T12:05:08.011Z
+[2018-10-09T20:05:08.014] [INFO] test - Cheese is Gouda.
+[2018-10-09T20:05:08.014] [WARN] test - Cheese is quite smelly.
+[2018-10-09T20:05:08.015] [ERROR] test - Cheese is too ripe!
+[2018-10-09T20:05:08.015] [FATAL] test - Cheese was breeding ground for listeria.
+[2018-10-09T20:39:14.521] [INFO] test - Time: 2018-10-09T12:39:14.520Z
+[2018-10-09T20:39:14.523] [INFO] test - Cheese is Gouda.
+[2018-10-09T20:39:14.524] [WARN] test - Cheese is quite smelly.
+[2018-10-09T20:39:14.524] [ERROR] test - Cheese is too ripe!
+[2018-10-09T20:39:14.524] [FATAL] test - Cheese was breeding ground for listeria.
