@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "做一个升级版本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "typescript"
+  ],
+  "author": "yaoyc",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^5.0.1",
+    "@types/koa-route": "^3.2.4",
+    "@types/mongoose": "^5.2.19",
+    "log4js": "^3.0.6"
+  }
+}

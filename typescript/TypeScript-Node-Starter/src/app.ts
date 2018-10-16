@@ -2,7 +2,7 @@ import express from "express";
 import compression from "compression";  // compresses requests
 import session from "express-session";
 import bodyParser from "body-parser";
-import logger from "./util/logger";
+import "./util/logger";
 import lusca from "lusca";
 import dotenv from "dotenv";
 import mongo from "connect-mongo";
