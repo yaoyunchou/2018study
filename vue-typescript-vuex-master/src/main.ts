@@ -24,10 +24,15 @@ Vue.use(MyButton);
 Vue.use(RestoreScroller);
 // Vue.use(VueScroll);
 
+
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+
+Vue.use(iView);
 // 注册一个全局自定义指令 `v-focus`
 Vue.directive('focus', {
   // 当被绑定的元素插入到 DOM 中时……
-  inserted: function (el) {
+  inserted: function (el:any) {
     // 聚焦元素
     el.focus()
   }

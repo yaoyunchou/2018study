@@ -110,7 +110,7 @@ interface VueRoot extends Vue {
 
 let nowName: string = '';
 const directive = {
-    inserted: function (el: DirectiveHTMLElement, binding: Binding, vnode: VNode) {
+    inserted: function (el: DirectiveHTMLElement, binding: any, vnode: VNode) {
         nowName = binding.value.name;
         if (!vnode.context) return this;
         if (!vnode.context.$root) return this;
@@ -129,14 +129,14 @@ const directive = {
         if (!el.restoreScroll[nowName]) {
             // console.log(11111);
             el.restoreScroll[nowName] = new RestoreScroll(options);
-            return this;
+           // return this;
         } else {
             // console.log(2222);
             el.restoreScroll[nowName].update(options);
-            return this;
+            //return this;
         }
     },
-    componentUpdated: function (el: DirectiveHTMLElement, binding: Binding, vnode: VNode) {
+    componentUpdated: function (el: DirectiveHTMLElement, binding: any, vnode: VNode) {
         nowName = binding.value.name;
         if (!vnode.context) return this;
         if (!vnode.context.$root) return this;
@@ -170,6 +170,6 @@ const directive = {
 
 export default {
     install (Vue: VueConstructor) {
-        Vue.directive('rescroll', directive);
+        Vue.directive('rescroll',directive);
     }
 };

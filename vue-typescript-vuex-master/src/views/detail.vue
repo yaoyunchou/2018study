@@ -125,7 +125,7 @@ export default class Detail extends Vue {
     hasComment: boolean = false;
 
     get id (): string {
-        return this.$route.query.id;
+        return this.$route.query.id+'';
     }
     get nickName (): any {
         return localStorage.getItem('nickname');
