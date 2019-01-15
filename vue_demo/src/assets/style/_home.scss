@@ -1,0 +1,80 @@
+
+/*----------------æŸ”æ€§+æŠ€æœ¯-----------------*/
+.flex-box h3 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.flex-box p {
+    font-size: 16px;
+}
+
+// ===================
+.flex-box {
+    padding: 42px 20px;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.flex-box h2 {
+    font-size: 28px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 21px;
+}
+
+.flex-box .flex-display,
+.flex-box .flex-sensior {
+    width: 49.75%;
+    float: left;
+    position: relative;
+}
+
+.flex-box a {
+    display: block;
+    width: 100%;
+    height: 365px;
+    overflow: hidden;
+}
+
+.flex-box img {
+    width: 100%;
+}
+
+.flex-box .flex-display {
+    margin-right: 0.5%;
+    margin-bottom: 0px;
+}
+
+.flex-display div,
+.flex-sensior div {
+    position: absolute;
+    bottom: 42px;
+    left: 53px;
+    text-shadow: 0 0 10px #000;
+}
+
+.flex-box h3 {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 13px;
+}
+
+.flex-box p {
+    font-size: 15px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.flex-box .flex-box-en {
+    width: 80%;
+}
+
+.nav_link {
+    color: #fff !important;
+}

@@ -1,0 +1,20 @@
+module.exports = {
+  UsOffice: 'US Office',
+  CnOffice: 'China Office',
+  OfficeHours: 'Office hours',
+  Address: 'Address',
+  Sales: 'Sales and Marketing',
+  Support: 'Support',
+  NAPR: 'NA PR',
+  Telephone: 'Telephone',
+  Email: 'Email',
+  SmartDevice: 'Smart Device',
+  Solutions: 'Solutions',
+  Display: 'Flexible Display',
+  Sensor: 'Flexible Sensor',
+  Media: 'Media',
+  Marketing: 'Marketing',
+  Dealer: 'Dealer',
+  CnOfficeHours: 'Monday to Friday, 9:00 to 18:00 (Beijing Time GMT+8:00)',
+  CnAddress: '19F,High-Tech Zone Union Tower,No.63,Xuefu Road,Nanshan district,Shenzhen,Guangdong,China'
+}

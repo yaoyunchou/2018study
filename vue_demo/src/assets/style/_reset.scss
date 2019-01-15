@@ -1,0 +1,12 @@
+/*css reset*/
+body,div,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,feildset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a, button { border: none; text-decoration: none; }
+ol,ul,li{list-style:none;}
+.clearfix:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+  

@@ -1,0 +1,14 @@
+@media screen and (min-width: 600px) {
+  .address-box .contact {
+    float: left;
+    width: 100%;
+    padding-bottom: .2rem;
+  }
+  .address-box .map-box {
+    float: left;
+    width: 100%;
+  }
+  .en-lang {
+    padding-top: 1rem;
+  }
+}

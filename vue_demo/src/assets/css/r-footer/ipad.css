@@ -1,0 +1,11 @@
+@media screen and (min-width: 600px) and (max-width: 899px){
+  
+}
+@media screen and (min-width: 1000px){
+	.footer-en .targets-dl {
+	    margin-left: .145rem;
+	}
+	#footer-nav.footer-en dl dd a, #footer-nav .copright a {
+    font-size: 12px;
+	}
+}

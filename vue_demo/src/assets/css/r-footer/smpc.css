@@ -1,0 +1,374 @@
+
+.targets{
+  padding-top:60px;
+  height:310px;
+  background:#333;
+  color:#E4E4E4;
+  font-size:14px;
+}
+.targets-en{
+  height:180px;
+}
+.targets a{
+  color:#949494;
+}
+.targets-left{
+  float:left;
+  text-align:left;
+  margin-left:20px;
+}
+.targets-dl{
+  float:left;
+  margin-left:30px;
+}
+.lang-en-css{
+  font-size:12px;
+  margin-left:30px;
+  margin-right:30px;
+}
+.targets-dl dt{
+  color:#E4E4E4;
+  padding-right:10px;
+}
+.targets-dl dt .footer-nav-icon{
+  display:none;
+}
+.targets-dl div{
+  margin-top:18px;
+}
+.targets-dl div dd{
+  font-size:12px;
+  margin-bottom:12px;
+  cursor:pointer;
+}
+.targets-dl div dd a:hover{
+  color:#007cba;
+}
+.lang-en-css div dd{
+  font-size:12px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+.targets-right{
+  float:right;
+  margin-right:40px;
+  text-align:center;
+}
+.enspan{
+  font-size:22px;
+  color:#E4E4E4;
+  display:block;
+  margin-bottom:10px;
+}
+.service-time{
+  font-size:14px;
+  color:#949494;
+  line-height:28px;
+}
+.targets-right a.email-send{
+  display:inline-block;
+  margin-top:20px;
+  background:#007cba;
+  width:160px;
+  height:36px;
+  line-height:36px;
+  color:#E4E4E4;
+  border-radius:5px;
+  font-size:12px;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+.target-right-en a.email-send{
+  margin-top:0;
+}
+.targets-right a.email-send i{
+  display:inline-block;
+  margin-top:7px;
+  margin-right:12px;
+  font-size:21px;
+  vertical-align:top;
+}
+
+.copright{
+  clear:both;
+  background:#333;
+  height:50px;
+  line-height:48px;
+  font-size:12px;
+  color:#949494;
+  position:relative;
+  border-top:1px solid #3E3E3E;
+}
+.copright span.copright-left{
+  margin-left:40px;
+}
+.copright span.copright-right{
+  float:right;
+  margin-right:40px;
+}
+.copright p.copright-down{
+  display:none;
+}
+.copright-right a{
+  color:#949494;
+  margin-right:5px;
+  cursor:pointer;
+}
+.copright-right a:hover{
+  color:#007cba;
+}
+.copright-a{
+  color:#949494;
+}
+.copright-a:hover{
+  color:#007cba;
+}
+.lang-box{
+  position:absolute;
+  bottom:50px;
+  right:0;
+  width:240px;
+  height:40px;
+  line-height:40px;
+  background:#3F3F3F;
+  text-align:center;
+  font-size:12px;
+  color:#fff;
+  cursor:pointer;
+  color:#949494;
+}
+.lang-box span:hover{
+  color:#007cba;
+}
+.copright .pc-show{
+  display:inline;
+}
+.copright .mobile-show{
+  display:none;
+}
+
+
+
+
+
+.email-modal-mask{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, .5);
+  z-index:999999;
+  display: table;
+  transition: opacity .3s ease;
+  overflow: hidden;
+}
+.email-modal-mask .modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.email-modal-mask  .modal-container {
+  width: 500px;
+  margin: 0px auto;
+  border-radius: 5px;
+  position: relative;
+  background: #f9f9f9;
+  z-index: 9999999;
+}
+.model-email-box{
+  border-radius: 5px;
+  width:100%;
+  padding:20px 0 40px;
+  color:#666;
+}
+.model-email-box h2{
+  font-size:21px;
+  text-align:center;
+}
+.model-email-box p{
+  width:90%;
+  margin-left:5%;
+  margin-bottom:8px;
+  font-size:14px;
+}
+.model-email-box p span{
+  font-size:12px;
+  color:#888;
+}
+.model-email-box p.title{
+  margin-top:20px;
+}
+.model-email-box p input,
+.model-email-box p select,
+.model-email-box p textarea,
+.model-email-box p button{
+  width:100%;
+  height:32px;
+  border-radius:5px;
+  border:1px solid #666;
+  font-size:12px;
+  color:#888;
+  text-indent:5px;
+  cursor:pointer;
+}
+.model-email-box p input:focus,
+.model-email-box p select:focus,
+.model-email-box p textarea:focus,
+.model-email-box p button:focus{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.model-email-box p input.error,
+.model-email-box p textarea.error{
+  border-color: red;
+}
+.model-email-box p input.error-shake,
+.model-email-box p textarea.error-shake{
+  -webkit-animation: shakeInput .2s infinite;
+  animation: shakeInput .2s infinite;
+}
+.model-email-box p select option{
+  font-size:14px;
+}
+.model-email-box p select option:hover{
+  background:#007cba;
+  color:#fff;
+}
+.model-email-box p textarea{
+  height:80px;
+  padding:10px 0;
+}
+.model-email-box p button{
+  background:rgb(51, 122, 183);
+  color:#fff;
+}
+.model-email-box p .email-err{
+  border:1px solid red;
+}
+.model-email-box .btnSuccess,
+.model-email-box .btnError{
+  color: #5cb85c;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.4em;
+  padding-top: 10px;
+}
+.model-email-box .btnError{
+  color: #d9534f;
+}
+.email-close  {
+  position: absolute;
+  top: -12px;
+  right: -15px;
+  width: 30px;
+  height:30px;
+  cursor: pointer;
+  background: url("../../images/rfooter/video_close.png") 0 0 no-repeat;
+  background-size:30px;
+  overflow: hidden;
+  z-index: 9999999;
+}
+
+
+.code-modal-mask{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, .5);
+  z-index:999999;
+  display: table;
+  transition: opacity .3s ease;
+  overflow: hidden;
+}
+.code-modal-mask .modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.code-modal-mask  .modal-container {
+  width: 700px;
+  margin: 0px auto;
+  border-radius: 5px;
+  position: relative;
+  background: #eee;
+  z-index: 9999999;
+}
+.model-code-box{
+  border-radius: 5px;
+  width:100%;
+  padding:20px 0 40px;
+  color:#666;
+  text-align:center;
+}
+.model-code-box h2{
+  font-size:21px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.model-code-box img{
+  width:40%;
+}
+.model-code-box img.mfirst{
+  margin-right:12%;
+}
+.model-code-box p{
+  margin-top:10px;
+}
+.model-code-box p span{
+  color:#333;
+  font-size:16px;
+  width:48%;
+  display:inline-block;
+  text-align:center;
+}
+.code-close  {
+  position: absolute;
+  top: -12px;
+  right: -15px;
+  width: 30px;
+  height:30px;
+  cursor: pointer;
+  background: url("../../images/rfooter/video_close.png") 0 0 no-repeat;
+  background-size:30px;
+  overflow: hidden;
+  z-index: 9999999;
+}
+
+/* 邮箱摇动动画 */
+@-webkit-keyframes shakeInput {
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  25%{
+    -webkit-transform: translate3d(5px, 0, 0);
+  }
+  50%{
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  75%{
+    -webkit-transform: translate3d(-5px, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes shakeInput {
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  25%{
+    transform: translate3d(5px, 0, 0);
+  }
+  50%{
+    transform: translate3d(0, 0, 0);
+  }
+  75%{
+    transform: translate3d(-5px, 0, 0);
+  }
+  100%{
+    transform: translate3d(0, 0, 0);
+  }
+}

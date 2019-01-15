@@ -1,0 +1,21 @@
+{
+  "env": {
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true
+  },
+  "plugins": ["html", "json"],
+  "rules": {
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "arrow-parens": [2, "as-needed"],
+    "sort-imports": [0, {
+      "ignoreCase": true,
+      "ignoreMemberSort": true,
+      "memberSyntaxSortOrder": ["", "all", "multiple", "single"]
+  }]
+  },
+  "parserOptions":{"ecmaVersion":6,"sourceType":"module","ecmaFeatures":{"jsx":true,"experimentalObjectRestSpread":true,"modules":true}}
+}

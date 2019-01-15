@@ -1,0 +1,55 @@
+@media screen and (min-width: 1300px){
+
+  .targets{
+    font-size:14px;
+    height:310px;
+  }
+  .targets-en{
+    height:210px;
+  }
+  .targets-left{
+    margin-left:20px;
+  }
+  .targets-dl{
+    margin-left:40px;
+  }
+  .targets-dl div dd{
+    font-size:14px;
+    margin-bottom:12px;
+  }
+  .lang-en-css{
+    font-size:14px;
+    margin-left:30px;
+    margin-right:30px;
+  }
+  .lang-en-css div dd{
+    font-size:14px;
+  }
+  .targets-right{
+    margin-right:60px;
+  }
+  .copright{
+    font-size:12px;
+  }
+  .copright span.copright-left{
+    margin-left:50px;
+  }
+  .copright span.copright-right{
+    margin-right:60px;
+  }
+  .lang-box{
+    right:30px;
+  }
+  .email-modal-mask  .modal-container {
+    width: 500px;
+  }
+  .code-modal-mask  .modal-container {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1440px){
+	.footer-en .targets-dl {
+	    margin-left: 36px;
+	}
+}

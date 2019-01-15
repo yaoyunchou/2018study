@@ -1,3 +1,6 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 // set the prefix and suffix of our sw's name
 workbox.core.setCacheNameDetails({
   prefix: 'browse-exp',
@@ -7,19 +10,21 @@ workbox.core.setCacheNameDetails({
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-// vue-cli3.0 supports pwa with the help of workbox-webpack-plugin, we need to get the precacheing list through this sentence.
+// vue-cli3.0 supports pwa with the help of workbox-webpack-plugin,
+// we need to get the precacheing list through this sentence.
+// eslint-disable-next-line no-underscore-dangle
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
 // cache our data, and use networkFirst strategy.
 workbox.routing.registerRoute(
   new RegExp('.*experiments\?.*'),
-  workbox.strategies.networkFirst()
+  workbox.strategies.networkFirst(),
 );
 workbox.routing.registerRoute(
   new RegExp('.*experiments/\\d'),
-  workbox.strategies.networkFirst()
-)
+  workbox.strategies.networkFirst(),
+);
 workbox.routing.registerRoute(
   new RegExp('.*experiment_types.*'),
-  workbox.strategies.networkFirst()
-)
+  workbox.strategies.networkFirst(),
+);

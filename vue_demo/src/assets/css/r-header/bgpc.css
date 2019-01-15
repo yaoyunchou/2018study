@@ -1,0 +1,66 @@
+@media screen and (min-width: 1300px){
+  .nav-left{
+    padding-left:280px;
+  }
+  .nav-left a span{
+    margin-left:40px;
+  }
+  .nav-left a .logo-img{
+    left:220px;
+  }
+  
+  .nav-right .mall-btn{
+    right:170px;
+  }
+  .nav-right .nav-user{
+    right:120px;
+  }
+
+  .nav-products dl{
+    width:160px;
+    margin-right:.15rem;
+  }
+  .nav-products dl.fl-first{
+    margin-left:295px;
+  }
+  .nav-products dl dd img{
+    height:90px;
+    margin-top:40px;
+    margin-bottom:20px;
+  }
+  .all-products-more dd{
+    margin-top:155px;
+  }
+  .nav-solutions dl{
+    width:120px;
+    background-size:80px;
+    margin-right:.15rem;
+    background-position:20px 50px;
+  }
+  .nav-solutions dl.fl-first{
+    margin-left:295px;
+  }
+  
+
+
+  .nav-supports{
+    left:507px; 
+  }
+
+  div.flex-en-css{
+    left:425px;
+  }
+  
+  div.supports-en-css{
+    left:560px;
+  }
+
+  div.flex-nl-css{
+    left:437px;
+  }
+  
+  div.supports-nl-css{
+    left:572px;
+  }
+  
+}
