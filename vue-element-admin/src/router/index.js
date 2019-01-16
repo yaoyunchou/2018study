@@ -60,12 +60,26 @@ export const constantRouterMap = [
     path: '/board',
     component: Layout,
     redirect: '/board/index',
+    meta: { title: 'board', icon: 'dashboard', noCache: true },
     children: [
       {
         path: 'index',
         component: () => import('@/views/home/index'),
         name: 'board',
-        meta: { title: 'board', icon: 'dashboard', noCache: true }
+        meta: { title: 'board_list', noCache: true }
+      },
+      {
+        path: 'detail/new',
+        component: () => import('@/views/home/detail'),
+        name: 'board_detail',
+        meta: { title: 'board_create', noCache: true }
+      },
+      {
+        path: 'detail/:id',
+        component: () => import('@/views/home/detail'),
+        name: 'board_edit',
+        hidden: true,
+        meta: { title: 'board_edit', noCache: true }
       }
     ]
   },

@@ -1,7 +1,6 @@
 import Mock from 'mockjs'
 import loginAPI from './login'
 import articleAPI from './article'
-import noticeAPI from './notice'
 import remoteSearchAPI from './remoteSearch'
 import transactionAPI from './transaction'
 
@@ -31,9 +30,6 @@ Mock.mock(/\/article\/pv/, 'get', articleAPI.getPv)
 Mock.mock(/\/article\/create/, 'post', articleAPI.createArticle)
 Mock.mock(/\/article\/update/, 'post', articleAPI.updateArticle)
 
-// 通告相关
-Mock.mock(/\/notice\/list/, 'get', noticeAPI.getList)
-Mock.mock(/\/notice\/detail/, 'get', noticeAPI.getArticle)
 // 搜索相关
 Mock.mock(/\/search\/user/, 'get', remoteSearchAPI.searchUser)
 

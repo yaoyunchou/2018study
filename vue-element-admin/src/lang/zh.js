@@ -2,6 +2,9 @@ export default {
   route: {
     dashboard: '首页面板',
     board: '公告栏',
+    board_list: '公告列表',
+    board_create: '新建公告',
+    board_edit: '修改公告',
     right: '权限管理',
     tip: '小宇提示',
     introduction: '简述',
@@ -166,6 +169,18 @@ export default {
     title: '标题',
     search: '筛选',
     add: '添加',
-    del: '删除'
+    delAll: '批量删除',
+    // 表格标题
+    th_title: '标题',
+    th_department: '部门',
+    th_edit: '操作',
+    th_datetime: '时间',
+    // 表单
+    fr_title: '标题',
+    fr_department: '部门',
+    fr_edit: '操作',
+    fr_desc: '内容',
+    fr_datetime: '定时发布',
+    fr_byemail: '邮件群发'
   }
 }
