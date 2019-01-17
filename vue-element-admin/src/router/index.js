@@ -87,12 +87,26 @@ export const constantRouterMap = [
     path: '/tips',
     component: Layout,
     redirect: '/tips/index',
+    meta: { title: 'tip', icon: 'documentation', noCache: true },
     children: [
       {
         path: 'index',
         component: () => import('@/views/tips/index'),
         name: 'Tips',
-        meta: { title: 'tip', icon: 'documentation', noCache: true }
+        meta: { title: 'tip', noCache: true }
+      },
+      {
+        path: 'detail/new',
+        component: () => import('@/views/tips/detail'),
+        name: 'tip_detail',
+        meta: { title: 'tip_create', noCache: true }
+      },
+      {
+        path: 'detail/:id',
+        component: () => import('@/views/tips/detail'),
+        name: 'tip_edit',
+        hidden: true,
+        meta: { title: 'tip_edit', noCache: true }
       }
     ]
   },
@@ -100,12 +114,26 @@ export const constantRouterMap = [
     path: '/right',
     component: Layout,
     redirect: '/right/index',
+    meta: { title: 'right', icon: 'lock', noCache: true },
     children: [
       {
         path: 'index',
         component: () => import('@/views/right/index'),
         name: 'Right',
-        meta: { title: 'right', icon: 'lock', noCache: true }
+        meta: { title: 'right', noCache: true }
+      },
+      {
+        path: 'detail/new',
+        component: () => import('@/views/right/detail'),
+        name: 'right_detail',
+        meta: { title: 'right_create', noCache: true }
+      },
+      {
+        path: 'detail/:id',
+        component: () => import('@/views/right/detail'),
+        name: 'right_edit',
+        hidden: true,
+        meta: { title: 'right_edit', noCache: true }
       }
     ]
   }
@@ -150,17 +178,17 @@ export const asyncRouterMap = [
     ]
   },
 
-  {
-    path: '/icon',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/svg-icons/index'),
-        name: 'Icons',
-        meta: { title: 'icons', icon: 'icon', noCache: true }
-      }
-    ]
-  },
+  // {
+  //   path: '/icon',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/svg-icons/index'),
+  //       name: 'Icons',
+  //       meta: { title: 'icons', icon: 'icon', noCache: true }
+  //     }
+  //   ]
+  // },
   { path: '*', redirect: '/404', hidden: true }
 ]

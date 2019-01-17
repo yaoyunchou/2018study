@@ -200,7 +200,7 @@ export default {
       }
     },
     handleCreate() {
-      this.$router.push({ name: 'board_detail', params: { id: 'new' }})
+      this.$router.push({ name: 'right_detail', params: { id: 'new' }})
     },
     createData() {
       this.$refs['dataForm'].validate((valid) => {

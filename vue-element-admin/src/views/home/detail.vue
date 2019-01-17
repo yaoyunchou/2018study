@@ -21,7 +21,7 @@
       <el-form-item :label="$t('board.fr_title')" prop="title">
         <el-input v-model="temp.title"/>
       </el-form-item>
-      <el-form-item>
+      <el-form-item :label="$t('board.fr_desc')" prop="desc">
         <tinymce :height="300" v-model="temp.desc"/>
       </el-form-item>
       <el-form-item :label="$t('board.fr_datetime')" prop="timestamp">
@@ -119,7 +119,7 @@ export default {
       dialogPvVisible: false,
       pvData: [],
       rules: {
-        type: [
+        desc: [
           { required: true, message: 'type is required', trigger: 'change' }
         ],
         timestamp: [
